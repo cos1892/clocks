@@ -1,0 +1,41 @@
+<table class="table">
+    <caption>Watchs</caption>
+    <tr>
+        <th>id Watch</th>
+        <th>Brand</th>
+        <th>Type Watch</th>
+        <th>Coast</th>
+        <th>Details Manufacturer</th>
+        <th>id Watchmaker</th>
+    </tr>
+    <% for(i=0;i<watchs.length;i++){ %>
+    <tr><td><%= watchs[i].idwatch%></td><td><%= watchs[i].brand%></td><td><%= watchs[i].watchtype%></td><td><%= watchs[i].coast%></td><td><%= watchs[i].detailsManufacturer%></td><td><%= watchs[i].idwatchmaker%></td>
+        <td><form method="post" action="/watches" >
+                <input type="hidden" name="idWatch" value="<%= watchs[i].idwatch%>" />
+                <input type="submit" value="Delete" />
+            </form>
+        </td>
+    </tr>
+    <% } %>
+</table>
+<a class="btn btn-default" href="/addWatch" role="button">Add</a>
+<a class="btn btn-default" href="/updateWatch" role="button">Update</a>
+<table class="table">
+    <caption>Watch Maker</caption>
+    <tr>
+        <th>id Watchmaker</th>
+        <th>Name</th>
+        <th>Country</th>
+    </tr>
+    <% for(i=0;i<watchmakers.length;i++){ %>
+    <tr><td><%= watchmakers[i].idwatchmaker%></td><td><%=watchmakers[i].name%></td><td><%= watchmakers[i].country%></td>
+        <td><form method="post" action="/watchmakers" >
+                <input type="hidden" name="idwatchmaker" value="<%= watchmakers[i].idwatchmaker%>" />
+                <input type="submit" value="Delete" />
+            </form>
+        </td>
+    </tr>
+    <% } %>
+</table>
+<a class="btn btn-default" href="/addWatchMaker" role="button">Add</a>
+<a class="btn btn-default" href="/updateWatchMaker" role="button">Update</a>

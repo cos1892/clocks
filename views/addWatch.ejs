@@ -1,0 +1,57 @@
+<table class="table">
+    <caption>Watchs</caption>
+    <tr>
+        <th>id Watch</th>
+        <th>Brand</th>
+        <th>Type Watch</th>
+        <th>Coast</th>
+        <th>Details Manufacturer</th>
+        <th>id Watchmaker</th>
+    </tr>
+    <% for(i=0;i<watchs.length;i++){ %>
+    <tr><td><%= watchs[i].idwatch%></td><td><%= watchs[i].brand%></td><td><%= watchs[i].watchtype%></td><td><%= watchs[i].coast%></td><td><%= watchs[i].detailsManufacturer%></td><td><%= watchs[i].idwatchmaker%></td></tr>
+    <% } %>
+</table>
+<form class="form-horizontal" name="addWatchForm" action="/addWatches" method="post">
+    <div class="form-group">
+        <label for="exampleInputBrand" class="control-label col-sm-2">Brand</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="brand" id="exampleInputBrand" placeholder="Arkitekt">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputType" class="control-label col-sm-2">Type Watch</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="watchtype" id="exampleInputType" placeholder="mechanical">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputCoast" class="control-label col-sm-2">Coast</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="coast" id="exampleInputCoast" placeholder="250">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputDetailsManufacturer" class="control-label col-sm-2">Details Manufacturer</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="detailsManufacturer" id="exampleInputDetailsManufacturer" placeholder="WED8942">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputIdWatchmaker" class="control-label col-sm-2">id Watchmaker</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="idwatchmaker" id="exampleInputIdWatchmaker" placeholder="1">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <input type="submit" value="Add">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <a class="btn btn-default" href="/" role="button">Main</a>
+        </div>
+    </div>
+</form>
+

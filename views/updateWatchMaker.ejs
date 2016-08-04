@@ -1,0 +1,42 @@
+<table class="table">
+    <caption>Watch Maker</caption>
+    <tr>
+        <th>id Watchmaker</th>
+        <th>Name</th>
+        <th>Country</th>
+    </tr>
+    <% for(i=0;i<watchmakers.length;i++){ %>
+    <tr><td><%= watchmakers[i].idwatchmaker%></td><td><%=watchmakers[i].name%></td><td><%= watchmakers[i].country%></td></tr>
+    <% } %>
+</table>
+
+<form class="form-horizontal" name="addWatchMakerForm" action="/updateWatchMakers" method="post">
+    <div class="form-group">
+        <label for="exampleInputIdWatchMaker" class="control-label col-sm-2">Id watchmaker for update</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="idwatchmaker" id="exampleInputIdWatchMaker" placeholder="2">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputName" class="control-label col-sm-2">Name</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="name" id="exampleInputName" placeholder="Fossil">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputCountry" class="control-label col-sm-2">Country</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="country" id="exampleInputCountry" placeholder="USA">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <input type="submit" value="Update">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+            <a class="btn btn-default" href="/" role="button">Main</a>
+        </div>
+    </div>
+</form>

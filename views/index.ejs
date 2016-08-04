@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Watchs</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/bootstrap-3.3.6-dist/css/bootstrap.min.css' />
+  </head>
+  <body>
+  <%if(center=='main'){%>
+  <%include main.ejs %>
+  <%}%>
+  <%if(center=='addWatch'){%>
+  <%include addWatch.ejs %>
+  <%}%>
+  <%if(center=='updateWatch'){%>
+  <%include updateWatch.ejs %>
+  <%}%>
+  <%if(center=='addWatchMaker'){%>
+  <%include addWatchMaker.ejs %>
+  <%}%>
+  <%if(center=='updateWatchMaker'){%>
+  <%include updateWatchMaker.ejs %>
+  <%}%>
+  </body>
+</html>
